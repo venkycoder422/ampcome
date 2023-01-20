@@ -318,10 +318,7 @@ padding:0px 26px;
 
 .View-All{
     cursor:pointer;
-    font
-    
-    
-    -style: normal;
+font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 17px;

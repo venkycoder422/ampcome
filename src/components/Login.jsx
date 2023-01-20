@@ -7,33 +7,33 @@ export const Login = () => {
     const [password, setPassword] = React.useState('');
     const [unit, setUnit] = React.useState('');
     const navigate = useNavigate();
-    const handleSubmit=()=>{
-        if(name=='' || password.length<4 || unit==''){
+    const handleSubmit = () => {
+        if (name == '' || password.length < 4 || unit == '') {
             alert('Please enter details');
-        }else{
-            let payload ={
-                'name':name,
-                'password':password,
-                'unit':unit
+        } else {
+            let payload = {
+                'name': name,
+                'password': password,
+                'unit': unit
             }
-            
-            localStorage.setItem('ampCome',JSON.stringify(payload));
+
+            localStorage.setItem('ampCome', JSON.stringify(payload));
             navigate('/dashboard');
         }
-        
+
     }
     return (
         <Container>
             <RightContent>
                 <h1 className="welcome-tag">Welcome to Friendly Doctor</h1>
-                <p>Go ahead of the curve Join the next generation of health heros.</p>
+                <p className="des-text">Go ahead of the curve Join the next generation of health heros.</p>
                 <img src={Frame1} alt="Frame" />
             </RightContent>
 
             <ScreenLeft className="leftContent">
-                
+
                 <div className="form-inputs">
-                <div className="signInContent">Sign-in to your account</div>
+                    <div className="signInContent">Sign-in to your account</div>
                     <div>
                         <input placeholder="User name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
@@ -42,7 +42,7 @@ export const Login = () => {
                     </div>
                     <div>
                         <select value={unit} onChange={(e) => setUnit(e.target.value)}>
-                            <option value="null" id="unitNull"selected hidden>Select Unit Name</option>
+                            <option value="null" id="unitNull" selected hidden>Select Unit Name</option>
                             <option value="Dentist">Dentist</option>
                             <option value="Cardiology">Cardiology</option>
                             <option value="ENT">ENT Specialist</option>
@@ -51,7 +51,7 @@ export const Login = () => {
                     </div>
                 </div>
                 <div className="submit-button">
-                   <input type="button" value="Submit" onClick={handleSubmit}/>
+                    <input type="button" value="Submit" onClick={handleSubmit} />
                 </div>
             </ScreenLeft>
         </Container>
@@ -71,7 +71,18 @@ const RightContent = styled.div`
         width: 775px;
         height: 900px;
         background: #F0F4FC;
+        .des-text{
+            font-family: 'Montserrat';
+            font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height, or 157% */
 
+text-align: center;
+
+color: rgba(32, 55, 101, 0.8);
+        }
         .welcome-tag{
         position: absolute;
         width: 292px;

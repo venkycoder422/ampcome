@@ -304,7 +304,43 @@ display:flex;
                 display:flex; 
                 gap:0px 50px;
                 margin-right: 20px;
-                .MuiTextField-root: { m: 1, width: '25ch' };
+                
+                .MuiFormControl-root {
+                    border: 1px solid black;
+                    border-radius:20px;
+                    width:200px;
+                    margin: 0;
+                    display: inline-flex;
+                    padding: 0;
+                    position: relative;
+                    min-width: 0;
+                    flex-direction: column;
+                    vertical-align: top;
+                    align-items:center;
+                }
+
+                .MuiFormLabel-root {
+                    color: rgba(0, 0, 0, 0.54);
+                    padding: 0;
+                    font-size: 18px;
+                    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                    font-weight: 600;
+                    line-height: 0;
+                    letter-spacing: 0.00938em;
+                    background-color:red;
+                }
+                .MuiInputLabel-formControl {
+                    top: -2px;
+                    left: 18px;
+                    position: absolute;
+                    // transform: translate(0, 24px) scale(1);
+                }
+                .fXbtHS .Earnings .Earning-Content .Selection-Content .MuiInputLabel-formControl {
+                    top: -9px;
+                    left: 18px;
+                    position: absolute;
+                    background-color: white;
+                }
 
             }
         }
