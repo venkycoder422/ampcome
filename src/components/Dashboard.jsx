@@ -418,6 +418,7 @@ gap:30px;
     position:relative;
     left:60px;
     color: rgba(41, 55, 95, 0.5);
+    width:346px;
 }
 .Activity-text{
     display:flex;
