@@ -15,6 +15,7 @@ import Update from '../assets/png/Update.png';
 import Circle from '../assets/png/circle.png'
 import { Appointments } from "./Appointments";
 import { Schedule } from "./Schedule";
+import { ConsultationHistory } from "./ConsultationHistory";
 export const DashBoard = () => {
     const currencies = [
         {
@@ -38,7 +39,7 @@ export const DashBoard = () => {
                 <Navbar />
                 <div className="top-bar">
                     <div className="User-Content">
-                        <p className="Name">Welcome <span>{userdata.name}</span></p>
+                        <p className="Name">Welcome <span class="NameBright">{userdata.name}</span></p>
                         <p className="DoctorNeeded">{userdata.unit}</p>
                     </div>
 
@@ -198,6 +199,8 @@ export const DashBoard = () => {
                 </div>
                 <Appointments />
                 <Schedule />
+
+                <ConsultationHistory />
             </HomeWrapper>
         </>
     )
@@ -218,7 +221,6 @@ display:flex;
         height: 46px;
         left: 172px;
         top: 40px;
-        font-family: 'Inter';
         font-style: normal;
         font-weight: 200;
         font-size: 34px;
@@ -229,15 +231,26 @@ display:flex;
         .Name{
             margin-bottom:0px;
         }
+        .NameBright{
+            color:white;
+            font-family: 'Inter';
+        }
         .DoctorNeeded{
             margin: 0px;
             padding: 0px 10px;
             width: 88px;
             height: 22px;
-           
+            font-size:16px;
             line-height: 90.19%;
             letter-spacing: 0.06em;
             color: #FFFFFF;
+            font-style: normal;
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 135.19%;
+            letter-spacing: 0.06em;
+            color: #FFFFFF;
+
         }
     }
     }
