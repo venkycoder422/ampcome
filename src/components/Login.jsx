@@ -46,12 +46,12 @@ export const Login = () => {
                             <option value="Dentist">Dentist</option>
                             <option value="Cardiology">Cardiology</option>
                             <option value="ENT">ENT Specialist</option>
-                            <option value="Gynaecologist"></option>
+                            <option value="Gynaecologist">Gynaecologist</option>
                         </select>
                     </div>
                 </div>
                 <div className="submit-button">
-                    <input type="button" value="Submit" onClick={handleSubmit} />
+                    <input type="button" value="Sign In" onClick={handleSubmit} />
                 </div>
             </ScreenLeft>
         </Container>
